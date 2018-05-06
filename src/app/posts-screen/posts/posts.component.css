@@ -1,0 +1,29 @@
+
+.post{
+  float:left;
+  margin: 20px;
+
+}
+
+.content{
+  font-family: "sans-serif";
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 10px;
+}
+.empty{
+  width: 60%;
+  height: 20%;
+  margin-left: 20%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.empty button{
+  margin-left: 50%;
+}
+.container{
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}

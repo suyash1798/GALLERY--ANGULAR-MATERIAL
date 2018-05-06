@@ -1,0 +1,11 @@
+<form [formGroup]="AddForm" (submit)="ADD()">
+  <div class="container">
+    <mat-form-field>
+      <input matInput placeholder="TITLE" formControlName="title">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="URL" formControlName="url">
+    </mat-form-field>
+      <button mat-raised-button color="accent" type="submit">ADD</button>
+  </div>
+</form>

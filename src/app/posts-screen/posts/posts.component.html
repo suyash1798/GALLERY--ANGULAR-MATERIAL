@@ -1,0 +1,28 @@
+<div *ngIf="!getPosts().length">
+  <mat-card class="empty">
+      <button mat-icon-button>
+        <mat-icon>add</mat-icon>
+      </button>
+  </mat-card>
+</div>
+<div *ngIf="getPosts()">
+  <div *ngFor="let post of getPosts(); let i = index">
+  <mat-card class="post" >
+    <img mat-card-xl-image [src]=post.url class="posts-image">
+    <mat-card-title>
+      <div class="content">
+      {{post.name}}
+      </div>
+    </mat-card-title>
+    <mat-card-actions>
+      <button mat-icon-button (click)="favorite_icon(i)">
+        <mat-icon [color]="post.favourite==true?'primary':'none'">favorite</mat-icon>
+      </button>
+      <button mat-icon-button (click)="delete_icon(i)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+</div>
+

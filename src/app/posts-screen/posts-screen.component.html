@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+  <span>WWE POSTS</span>
+  <span class="spacer"></span>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="delete_all()">
+      <mat-icon>delete</mat-icon>
+      <span>Remove ALL</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>info</mat-icon>
+      <span>About</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>
+
+<mat-tab-group class="container" >
+  <mat-tab label="POSTS" class="container">
+   <app-posts></app-posts>
+  </mat-tab>
+  <mat-tab label="ADD_A_NEW">
+    <app-add-a-new></app-add-a-new>
+  </mat-tab>
+</mat-tab-group>
+
+
